@@ -126,7 +126,7 @@ const clickCourseList = (e, courseId) => {
     // 특정 코스를 선택했을 때 마커 이미지에 dashed 보더가 생김
     const markerImages = document.querySelectorAll('#location-map img[src*="/file/map"]')
     markerImages.forEach((img, i) => {
-        if(img.title.replace(/<br\/>/g, '\n') === e.target.innerText) {
+        if(img.title.replace(/<br \/>/g, '\n') === e.target.innerText) {
             img.classList.add('focused')
             img.parentNode.classList.add('z-index')
         } else {

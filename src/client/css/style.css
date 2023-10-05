@@ -4,10 +4,11 @@
 .splash img.splash_logo { position: absolute; width:200px; left: 50%; top: 50%; transform: translate(-50%, -50%)}
 
 /* home */
-.home { position: relative; padding-bottom: 200px; min-height: calc(var(--vh, 1vh)*100); }
-.home:before { content: ""; display: block; position: fixed; left: 0; top: 0;  width: 100%; height: 100%; z-index: -10; background: url(../file/home_bg.jpeg) no-repeat center center; background-size: cover; }
-.home .grid_container { color: white; }
-header { padding: 10px 30px; }
+.home_page { position: relative; padding-bottom: 200px; min-height: calc(var(--vh, 1vh)*100); }
+.home_page:before { content: ""; display: block; position: fixed; left: 0; top: 0;  width: 100%; height: 100%; z-index: -10; background: url(../file/home_bg.jpeg) no-repeat center center; background-size: cover; }
+.home_page .grid_container { color: white; }
+header { padding: 10px 30px; z-index: 99; width: 100%; }
+header.brown {  background-color: #fff;  position: absolute; }
 header.border_bottom { border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
 header img { width: 180px; }
 .catchphrase { position: relative;  margin-top: 65px; margin-bottom: 20px;}
@@ -82,18 +83,32 @@ bsolute
 #location-map img[src*='/file/map'].focused { border: 2px dashed rgb(255, 0, 0, 0.6) !important; border-radius: 50%;}
 #location-map .myPosition { position: absolute; bottom: 15px; left: 10px; z-index: 99; }
 #location-map .myPosition img { width: 50px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 20px;}
-
-/* course */
 .detail-course-img { margin-top: 20px;}
 .detail-course-img img { width: 100%; }
 .course-title { text-align: center; font-size: 30px; padding: 15px 0 25px; border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
-.course-description { padding: 20px;}
+.course-description { padding: 20px 20px 80px;}
 
 /* qr */
 .qr-container { width: 100%; padding-top: 30px;  }
 .wait-text { text-align: center;  font-weight: bold;  font-size:20px; }
 .wait-text.hidden { display: none; }
 .canvas-wrap { padding-top: 50px; display: flex; justify-content: center; align-items: center; }
+
+/* stamp */
+.stamp-page { position: absolute; padding-bottom: 100px; left: 0; top: 0; width: 100%; min-height: calc(var(--vh, 1vh)*100); background: url(../file/stamp_page_bg.png); background-size: cover; padding-top: 80px; }
+.current-level .text { font-size: 14px; text-align: center;}
+.current-level .text.sm { font-size: 8px; opacity: 0.5; }
+.current-level { width: 100%; height: 140px; background-color: #fff; border-radius: 10px; padding: 10px; margin-bottom: 20px;}
+.get-coupon { font-size: 14px; display: flex; align-items: center; justify-content: flex-end; }
+.get-coupon img { width: 20px; margin-left: 5px; }
+.level { margin-bottom: 10px; }
+.level .level-num { font-size: 60px; font-weight: bold; margin-left: 5px; }
+.bar-graph-container { position: relative; width: 100%; height: 15px; background-color: #777777; margin: 0 auto; margin-bottom: 5px;}
+.bar-graph { width: 0; transition: all 0.8s; background-color: #D71A17; height: 15px; position: absolute; left: 0; top: 0; }
+.stamp-container { width: 100%; background: #fff; opacity: 0.7; border-radius: 10px; padding: 15px 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px 0;}
+.stamp { display: flex; flex-direction: column; align-items: center; text-align: center;}
+.stamp .stamp-img { width: 80px; margin-bottom: 5px; }
+.stamp .stamp-name { font-size: 14px; font-weight: bold; color: #222; }
 
 /* users */
 .users-container { display: flex; align-items: center; justify-content: center; flex-direction: column; height: 100%; }
